@@ -1,0 +1,41 @@
+function isAlphaNumeric(str) {
+    // Regex to check valid
+    // alphanumeric string 
+    let regex = new RegExp(/^(?=.*[a-zA-Z])(?=.*[0-9])[A-Za-z0-9]+$/);
+ 
+    // if str
+    // is empty return false
+    if (str == null) {
+        return "false";
+    }
+ 
+    // Return true if the str
+    // matched the ReGex
+    if (regex.test(str) == true) {
+        return "true";
+    }
+    else {
+        return "false";
+    }
+}
+ 
+// Driver Code
+// Test Case 1:
+let str1 = "string123";
+console.log(isAlphaNumeric(str1));
+ 
+// Test Case 2:
+let str2 = "strings";
+console.log(isAlphaNumeric(str2));
+ 
+// Test Case 3:
+let str3 = "strings123@#";
+console.log(isAlphaNumeric(str3));
+ 
+// Test Case 4:
+let str4 = "#123";
+console.log(isAlphaNumeric(str4));
+ 
+// Test Case 5:
+let str5 = "#@#";
+console.log(isAlphaNumeric(str5));
